@@ -45,4 +45,5 @@ You have to:
 
 Spark docs:
 
+- [Pyspark API reference doc](https://spark.apache.org/docs/latest/api/python/pyspark.html)
 - [RDD Transformations](https://spark.apache.org/docs/latest/rdd-programming-guide.html#transformations)
