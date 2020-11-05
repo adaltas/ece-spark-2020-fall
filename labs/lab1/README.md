@@ -38,7 +38,8 @@ You have to:
 2. Find the top 10 of the most used words
    1. By chapter
    2. In the whole book
-3. Bonus: print the results nicely
+3. Find the most used word at the start of a line
+4. Bonus: print the results nicely
 
 ### Resources
 
