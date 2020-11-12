@@ -34,7 +34,7 @@ Go through the notebook and fill the blanks. By the end of the session we should
 1. Computed the total money earned by each driver for each day with the following conditions:
    - When the `payment_type` is `CSH`, the tip is not included in the `total_fare`, otherwise the `total_fare` already contains the tip
    - The `tolls` fare are payed by driver
-2. Compute by hour:
+2. Compute by hour of the day (`00` to `23`):
    - The average tip
    - The average duration
    - The average “distance at the crow flies” (“à vol d’oiseau”)
