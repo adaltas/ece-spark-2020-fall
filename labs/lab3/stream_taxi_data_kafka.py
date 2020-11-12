@@ -27,7 +27,11 @@ DATE_OFFSET = STREAM_START_TIME - CSV_START_TIME \
 
 TIME_FORMAT = r'%Y-%m-%d %H:%M:%S'
 
-producer = KafkaProducer(bootstrap_servers=args.brokers.split(','))
+producer = KafkaProducer(
+    bootstrap_servers=args.brokers.split(','),
+    security_protocol='SASL_PLAINTEXT',
+    sasl_mechanism='GSSAPI'
+)
 
 with gzip.open('data/nycTaxi%s.gz' % args.dataset.capitalize()) as csv_file:
     line = csv_file.readline().decode('utf-8')
