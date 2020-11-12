@@ -59,5 +59,6 @@ with gzip.open('data/nycTaxi%s.gz' % args.dataset.capitalize()) as csv_file:
 
         print(','.join(record))
         producer.send(args.topic, str(','.join(record)).encode('utf-8'))
+        producer.flush(timeout=10)
 
         line = csv_file.readline().decode('utf-8')
