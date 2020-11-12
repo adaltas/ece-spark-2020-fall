@@ -31,7 +31,9 @@ Go through the notebook and fill the blanks. By the end of the session we should
 
 ### Homework
 
-1. Computed the total money earned by each driver for each day
+1. Computed the total money earned by each driver for each day with the following condition:
+   - When the `payment_type` is `CSH`, the tip is not included in the `total_fare`
+   - Otherwise the `total_fare` already contains the tip
 2. Compute by hour:
    - The average tip
    - The average duration
