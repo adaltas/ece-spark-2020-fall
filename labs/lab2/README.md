@@ -8,7 +8,8 @@ Connect to the Adaltas cloud cluster using OpenVPN.
 
 ### Goals
 
-Analyze the New York City datasets:
+Analyze the New York City Taxi datasets:
+
 - Gather interesting stats about the data
 
 ### Connection to Zeppelin
@@ -24,6 +25,7 @@ Analyze the New York City datasets:
 ### During the session
 
 Go through the notebook and fill the blanks. By the end of the session we should have:
+
 - Gathered basic stats about drivers
 - Joined the 2 datasets to enrich the data
 
