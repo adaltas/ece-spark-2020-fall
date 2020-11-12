@@ -37,7 +37,6 @@ Go through the notebook and fill the blanks. By the end of the session we should
 2. Compute by hour of the day (`00` to `23`):
    - The average tip
    - The average duration
-   - The average “distance at the crow flies” (“à vol d’oiseau”)
 3. Find the hour of the day when the tips are the highest
 4. Find the percentage of each type of payment
 5. Find the top 10 drivers that:
