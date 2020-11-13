@@ -1,6 +1,7 @@
 # Structured Streaming lab
 
 The goals of this labs are to:
+
 - Stream the NYC Taxi datasets on a socket
 - Use Spark Streaming to analyze the stream
 
@@ -12,9 +13,10 @@ The goals of this labs are to:
 ## Streaming the datasets
 
 To stream the NY datasets:
+
 - Go to this directory:
   ```
-  cd ece-spark/structured-streaming
+  cd ece-spark-2020-fall/labs/lab3
   ```
 - Run the `stream_taxi-data.py` script. The script has 3 parameters: the server name to use to stream the data, the port on which to open the socket, the dataset to stream (can be either `fares` or `rides`)
   ```
