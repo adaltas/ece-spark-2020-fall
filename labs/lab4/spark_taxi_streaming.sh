@@ -7,7 +7,7 @@
 # $3 = fares_socket_port
 
 if [ "$#" -eq 3 ]; then
-  app_name="$USER\_taxi_streaming"
+  app_name="$USER"_taxi_streaming
 
   # Clean checkpoint and output directory
   hdfs dfs -rm -r -f "/user/$USER/checkpoint/$app_name"
