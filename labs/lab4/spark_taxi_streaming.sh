@@ -6,7 +6,7 @@
 # $2 = socket_host
 # $3 = fares_socket_port
 
-if [ "$#" -eq 4 ]; then
+if [ "$#" -eq 3 ]; then
   app_name="$USER\_taxi_streaming"
 
   # Clean checkpoint and output directory
@@ -18,6 +18,6 @@ if [ "$#" -eq 4 ]; then
   "$app_name" "$3" "$2" -f "$4"
 else
   echo "Wrong paramters"
-  echo "Usage: $(basename "$0") <app_name> <output_dir> <socket_host> <fares_socket_port>"
+  echo "Usage: $(basename "$0") <output_dir> <socket_host> <fares_socket_port>"
 fi
 
