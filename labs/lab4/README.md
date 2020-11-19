@@ -39,15 +39,15 @@ Connect to the Adaltas cloud cluster using OpenVPN.
   ```
 - To stop the application using `yarn application`
   - Use the `-list` command to find your application:
-    ```
-    yarn application -list | grep USERNAME
+    ```sh
+    yarn application -list | grep "$USER"
     ```
   - Kill the application using the `-kill` command and the application ID:
-    ```
+    ```sh
     yarn application -kill APP_ID
     ```
 - Before re-submitting the app, clear the output and the checkpoint directory:
-  ```
+  ```sh
   hdfs dfs -rm -r /APP_OUTPUT_DIR/*
   hdfs dfs -rm -r /user/gauthier/checkpoint/*
   ```
