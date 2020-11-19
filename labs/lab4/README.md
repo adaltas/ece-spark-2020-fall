@@ -26,7 +26,7 @@ Connect to the Adaltas cloud cluster using OpenVPN.
 
 ### Submitting the application
 
-- Go to the `application-submitting` directory
+- Go to the `labs/lab4` directory
 - Use `spark-submit` to submit the application:
   ```
   spark-submit --master yarn \
