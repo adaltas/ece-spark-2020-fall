@@ -1,16 +1,22 @@
-# Structured Streaming lab
+# Data Engineering with Spark
 
-The goals of this labs are to:
+## Lab 3: Structured Streaming
+
+### Prerequisites
+
+Connect to the Adaltas cloud cluster using OpenVPN.
+
+### Goals
 
 - Stream the NYC Taxi datasets on a socket
 - Use Spark Streaming to analyze the stream
 
-## Lab resources
+### Lab resources
 
 - The `data` directory contains the NYC Taxi datasets;
 - The `stream_taxi_data_socket.py` allows to stream a dataset through a socket on a given port.
 
-## Streaming the datasets
+### Streaming the datasets
 
 To stream the NY datasets:
 
