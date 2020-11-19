@@ -77,7 +77,7 @@ fares_count_query = (
     .writeStream
     .outputMode('append')
     .format('parquet')
-    .trigger(processingTime='10 seconds')
+    .trigger(processingTime='30 seconds')
     .option('path', args.outputpath)
     .option('checkpointLocation', args.checkpoint if args.checkpoint
             else '/user/{}/checkpoint/{}'.format(
