@@ -28,13 +28,13 @@ Connect to the Adaltas cloud cluster using OpenVPN.
 
 - Go to the `labs/lab4` directory
 - Use `spark-submit` to submit the application:
-  ```
+  ```sh
   spark-submit --master yarn \
   --deploy-mode cluster \
   ./taxi_streaming_analysis.py \
   gauthier_taxi_streaming \
   edge-1.au.adaltas.cloud \
-  HDFS_OUTPUT_DIRECTORY \
+  "/education/ece/big-data/2020/fall/bda/gr1/$USER/spark-lab4/output/fares_metrics" \
   -f PORT_NUMBER
   ```
 - To stop the application using `yarn application`
