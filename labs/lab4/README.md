@@ -33,7 +33,7 @@ Connect to the Adaltas cloud cluster using OpenVPN.
   --deploy-mode cluster \
   ./taxi_streaming_analysis.py \
   gauthier_taxi_streaming \
-  edge1.au.adaltas.cloud \
+  edge-1.au.adaltas.cloud \
   HDFS_OUTPUT_DIRECTORY \
   -f PORT_NUMBER
   ```
