@@ -11,11 +11,11 @@ if [ "$#" -eq 3 ]; then
 
   # Clean checkpoint and output directory
   hdfs dfs -rm -r -f "/user/$USER/checkpoint/$app_name"
-  hdfs dfs -rm -r -f "$2"
+  hdfs dfs -rm -r -f "$1"
 
   spark-submit --properties-file "$(dirname "$0")/app.properties" \
   "$(dirname "$0")/taxi_streaming_analysis.py" \
-  "$app_name" "$3" "$2" -f "$4"
+  "$app_name" "$2" "$1" -f "$3"
 else
   echo "Wrong paramters"
   echo "Usage: $(basename "$0") <output_dir> <socket_host> <fares_socket_port>"
