@@ -20,7 +20,7 @@ Connect to the Adaltas cloud cluster using OpenVPN.
 3. In the folder `ece-2020/spark/ref`:
    1. Navigate to the `lab1` notebook
    2. Create a copy of the notebook (by using the **Clone this note** button) and name it like follow: `ece-2020/spark/cluster-username/lab1` (e.g. `ece-2020/spark/gauthier/lab1`). This should create your folder in `ece-20202/spark`.
-   3. In your notebook `lab1` → **🔒 Note permissions**: add the user `gauthier` to the “Runners” (and any other user you want)
+   3. In your notebook `lab1` → **🔒 Note permissions**: add the user `gauthier` or `xavier` to the “Runners” (and any other user you want)
    4. Initialize your interpreter by running the first cell
 
 ### During the session
