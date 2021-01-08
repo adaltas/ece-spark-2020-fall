@@ -14,8 +14,8 @@ Connect to the Adaltas cloud cluster using OpenVPN.
 
 ### Lab resources
 
-- The `taxi_streaming_analysis.py` pyspark script read streaming data from a socket and output aggregated results in parquet format to a HDFS directory
-- The `app.properties` file define Spark application properties
+- The `taxi_streaming_analysis.py` pyspark script reads streaming data from a socket and outputs aggregated results in parquet format to a HDFS directory
+- The `app.properties` file defines Spark application properties
 - The `yarn_kill_app.sh` can be used to easily kill a YARN application using a keyword and a username
 
 ### Useful links
@@ -32,11 +32,20 @@ Connect to the Adaltas cloud cluster using OpenVPN.
   spark-submit --master yarn \
   --deploy-mode cluster \
   ./taxi_streaming_analysis.py \
-  gauthier_taxi_streaming \
-  edge-1.au.adaltas.cloud \
-  "/education/ece/big-data/2020/fall/bda/gr1/$USER/spark-lab4/output/fares_metrics" \
+  APP_NAME \
+  HOST_ADDRESS \
+  HDFS_OUTPUT_DIRECTORY \
   -f PORT_NUMBER
   ```
+  
+  `APP_NAME` is a name to show in the list of running applications (you could choose it)
+  
+  `HDFS_OUTPUT_DIRECTORY` is a directory which will contain the results. If you work on edge server you could use relative path, for example:
+  `/education/ece/big-data/2020/fall/bda/gr1/$USER/spark-lab4/output/fares_metrics` or full path `hdfs://HDFS_SERVER_HOST/education/ece/big-data/2020/fall/bda/gr1/$USER/spark-lab4/output/fares_metrics`. 
+  Creation of the directory before the run is not necessarily. It will be created automatically. 
+  
+  `HOST_ADDRESS` and `PORT_NUMBER` show the resource of streaming data. For instance: `edge-1.au.adaltas.cloud` and `11111`.
+  
 - To stop the application using `yarn application`
   - Use the `-list` command to find your application:
     ```sh
@@ -48,8 +57,8 @@ Connect to the Adaltas cloud cluster using OpenVPN.
     ```
 - Before re-submitting the app, clear the output and the checkpoint directory:
   ```sh
-  hdfs dfs -rm -r /APP_OUTPUT_DIR/*
-  hdfs dfs -rm -r /user/gauthier/checkpoint/*
+  hdfs dfs -rm -r /HDFS_OUTPUT_DIRECTORY/*
+  hdfs dfs -rm -r /user/USERNAME/checkpoint/*
   ```
 
 ### TO DO
